@@ -1,0 +1,91 @@
+<div class="mb-5"></div>
+<div class="container-fluid">
+  <br>
+  <div class="jumbotron-default border p-2">
+    <h3>Blog</h3>
+    <div class="row">
+      <div class="col-md-8">
+        <h4 class="mt-4">Blog title</h4>
+        <p class="lead">
+          by
+          <a href="#">Start Bootstrap</a>
+        </p>
+        <hr>
+        <p>Posted on January 1,2020 at 12:00pm</p>
+        <hr>
+        <img class="img-fluid rounded" alt="" src="http://placehold.it/900x300" alt="">
+        <hr>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>
+        <blockquote class="blockquote">
+          <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+          <footer class="blockquote-footer">Someone famous in
+            <cite title="Source Title">Source Title</cite>
+          </footer>
+        </blockquote>
+      <hr>
+      <h4 class="mt-4">Comments</h4>
+      <div class="media mb-4">
+        <!-- <img src="http://placehold.it/50x50" class="d-flex mr-3 rounded-circle" alt=""> -->
+        <div class="media-body">
+          <div *ngFor="let blog of blogs">
+            <h5 class="mt-0"> {{blog.person_name}} </h5>
+            <p> {{blog.person_comments}} </p>
+            <p> {{blog.datetime}} </p>
+            <hr>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="col-md-4 ">
+        <div class="card my-4">
+          <h5 class="card-header">Leave a comments:</h5>
+          <div class="card-body">
+            <div>
+              <form [formGroup]="angForm"  novalidate>
+                <div class="input-group">
+                  <input type="text" class="form-control" formControlName="person_name" #person_name placeholder="Name">
+                </div>
+                <div class="mb-2"></div>
+                <div *ngIf="angForm.controls['person_name'].invalid && (angForm.controls['person_name'].dirty || angForm.controls['person_name'].touched)" class="alert alert-danger">
+                  <div *ngIf="angForm.controls['person_name'].errors.required">
+                   Name is required.
+                  </div>
+                </div>
+                <div class="mb-2"></div>
+                <div class="input-group">
+                  <input type="date" class="form-control" formControlName="datetime" #datetime placeholder="Date">
+                </div>
+                <div class="mb-2"></div>
+                <div *ngIf="angForm.controls['datetime'].invalid && (angForm.controls['datetime'].dirty || angForm.controls['datetime'].touched)" class="alert alert-danger">
+                  <div *ngIf="angForm.controls['datetime'].errors.required">
+                   Date is required.
+                  </div>
+                </div>
+                <div class="mb-2"></div>
+                <!-- <div class="form-group">
+                    <input type="file" name="image"  />
+                </div> -->
+                <div class="input-group">
+                  <textarea class="form-control" formControlName="person_comments" #person_comments  placeholder="Comments" cols="50" rows="10"></textarea>
+                </div>
+                <div class="mb-2"></div>
+                <div *ngIf="angForm.controls['person_comments'].invalid && (angForm.controls['person_comments'].dirty || angForm.controls['person_comments'].touched)" class="alert alert-danger">
+                  <div *ngIf="angForm.controls['person_comments'].errors.required">
+                   Comments is required.
+                  </div>
+                </div>
+                <div class="mb-2"></div>
+                <div class="form-group">
+                    <button type="submit" (click)="addBlog(person_name.value, datetime.value, person_comments.value)" [disabled]="angForm.pristine || angForm.invalid" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mb-3"></div>

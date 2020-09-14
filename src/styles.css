@@ -1,0 +1,6 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,300;0,400;1,300&display=swap');
+@import "../node_modules/ng2-slim-loading-bar/style.css";
+body{
+    font-family: 'Muli', sans-serif;
+}

@@ -1,0 +1,33 @@
+.frame {
+	text-align: center;	
+	position: relative;
+	cursor: pointer;	
+    perspective: 500px; 
+    border: dashed 1px #1a237e;
+}
+
+.frame img {
+	width: 300px;
+	height: 300px;
+}
+
+.frame .details {
+	width: 71%;
+	height: 43%;	
+	padding: 5% 8%;
+	position: absolute;
+	content: "";
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotateY(90deg);
+	transform-origin: 50%;
+	background: rgb(26, 35, 126);	
+	opacity: 0;
+	transition: all 0.4s ease-in;
+	color:#fff;
+}
+
+.frame:hover .details {
+	transform: translate(-50%, -50%) rotateY(0deg);
+	opacity: 1;
+}

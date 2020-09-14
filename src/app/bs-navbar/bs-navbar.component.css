@@ -1,0 +1,16 @@
+.bg-dark{
+    background-color: #f6f578 !important;
+}
+.logo{
+    width:6.1rem;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: #1a237e !important;
+}
+.navbar-dark .navbar-toggler {
+    color: #ffffff;
+    border-color: #0062cc;
+}
+.pointer {
+  cursor: pointer;
+}

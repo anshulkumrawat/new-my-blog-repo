@@ -1,0 +1,125 @@
+footer{
+    color: white;
+  }
+  footer a{
+    color: #bfffff;
+  }
+  footer a:hover{
+    color: white;
+  }
+
+  .footer-bottom{
+    background: #1a237e !important;
+    padding: 0em;
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px; /* Set the fixed height of the footer here */
+    line-height: 60px; /* Vertically center the text there */
+    background-color: #f5f5f5;
+  }
+  p.text-xs-center.ftr-text {
+    margin-top: 1em !important;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: none;
+}
+.btn-bg{
+  background-color: #ffde00;
+}
+
+.icon-button {
+	background-color: white;
+	border-radius: 2.6rem;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 1.3rem;
+	height: 2.6rem;
+	line-height: 2.6rem;
+	margin: 0 5px;
+	position: relative;
+	text-align: center;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+	width: 2.6rem;
+}
+
+.icon-button span {
+	border-radius: 0;
+	display: block;
+	height: 0;
+	left: 50%;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	     -o-transition: all 0.3s;
+	        transition: all 0.3s;
+	width: 0;
+}
+.icon-button:hover span {
+	width: 2.6rem;
+	height: 2.6rem;
+	border-radius: 2.6rem;
+	margin: -1.3rem;
+}
+
+.icon-button i {
+	background: none;
+	color: white;
+	height: 2.6rem;
+	left: 0;
+	line-height: 2.6rem;
+	position: absolute;
+	top: 0;
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	     -o-transition: all 0.3s;
+	        transition: all 0.3s;
+	width: 2.6rem;
+	z-index: 10;
+}
+
+.twitter span {
+	background-color: #4099ff;
+}
+
+.youtube span {
+	background-color: #bb0000;
+}
+
+.linkedin span{
+  background-color: #0077b5;
+}
+
+.github span{
+  background-color:#000;
+}
+.icon-button .icon-twitter {
+	color: #4099ff;
+}
+
+.icon-button .fa-youtube {
+	color: #bb0000;
+}
+
+.icon-button .fa-linkedin{
+  color:#0077b5;
+}
+
+.icon-button .fa-github{
+  color:#000;
+}
+
+.icon-button:hover .icon-twitter, .icon-button:hover .fa-youtube, .icon-button:hover .fa-linkedin, .icon-button:hover .fa-github{
+  color: white;
+}
